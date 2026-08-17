@@ -630,7 +630,7 @@ function App() {
                   </a>
 
                   <a
-                    href="https://wa.me/254700000000"
+                    href="https://wa.me/254781325424"
                     className="secondary-button"
                   >
                     WhatsApp
