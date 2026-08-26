@@ -1,10 +1,9 @@
 function Hero(){
       return(
-            <section className="hero" id="home">
+        <section className="hero" id="home">
           <div className="hero-background"></div>
 
           <div className="container hero-container">
-
             <div className="hero-content">
 
               <div className="eyebrow">
@@ -176,7 +175,6 @@ function Hero(){
               </div>
 
             </div>
-
           </div>
         </section>
       );
