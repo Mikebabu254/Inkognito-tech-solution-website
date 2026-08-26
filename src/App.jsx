@@ -28,42 +28,70 @@ function App() {
 
       {/* ================= NAVBAR ================= */}
       <header className="navbar">
-        <div className="container nav-container">
+  <div className="container nav-container">
 
-        <button onClick={() => setTheme("dark")}>
-        Dark
-      </button>
+    <a href="#home" className="logo">
+      <span className="logo-mark">I</span>
 
-      <button onClick={() => setTheme("light")}>
-        Light
-      </button>
+      <span>
+        <strong>Inkognito</strong>
+        <small>TECH SOLUTIONS</small>
+      </span>
+    </a>
 
-      <button onClick={() => setTheme("system")}>
-        System
-      </button>
-          <a href="#home" className="logo">
-            <span className="logo-mark">I</span>
-            <span>
-              <strong>Inkognito</strong>
-              <small>TECH SOLUTIONS</small>
-            </span>
-          </a>
+    <nav className="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-          <nav className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
+    <div className="nav-actions">
 
-          <a href="#contact" className="nav-button">
-            Get Started
-          </a>
+      <div className="theme-switcher">
 
-        </div>
-      </header>
+        <button
+          className={`theme-option ${
+            theme === "light" ? "active" : ""
+          }`}
+          onClick={() => setTheme("light")}
+          aria-label="Light mode"
+        >
+          ☀
+        </button>
+
+        <button
+          className={`theme-option ${
+            theme === "system" ? "active" : ""
+          }`}
+          onClick={() => setTheme("system")}
+          aria-label="System mode"
+        >
+          💻
+        </button>
+
+        <button
+          className={`theme-option ${
+            theme === "dark" ? "active" : ""
+          }`}
+          onClick={() => setTheme("dark")}
+          aria-label="Dark mode"
+        >
+          ☾
+        </button>
+
+      </div>
+
+      <a href="#contact" className="nav-button">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+</header>
 
 
       {/* ================= HERO ================= */}
