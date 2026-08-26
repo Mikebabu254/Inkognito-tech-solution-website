@@ -1,7 +1,28 @@
 import React from "react";
 import "./App.css";
+import {useState, useEffect} from "react";
 
 function App() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ||"system"
+  );
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      root.classList.add("dark");
+      root.classList.remove("light");
+    } else if (theme === "light" || (theme === "system" && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+      root.classList.remove("dark");
+      root.classList.add("light");
+    } else {
+      root.classList.remove("dark", "light");
+    }
+
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
     <div className="app">
 
@@ -9,6 +30,17 @@ function App() {
       <header className="navbar">
         <div className="container nav-container">
 
+        <button onClick={() => setTheme("dark")}>
+        Dark
+      </button>
+
+      <button onClick={() => setTheme("light")}>
+        Light
+      </button>
+
+      <button onClick={() => setTheme("system")}>
+        System
+      </button>
           <a href="#home" className="logo">
             <span className="logo-mark">I</span>
             <span>
