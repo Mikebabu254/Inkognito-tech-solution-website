@@ -7,8 +7,8 @@ import Hero from "./components/main/Hero";
 import Services from "./components/main/Services";
 import Solution from "./components/main/Solution";
 import Portfolio from "./components/main/Portfolio";
-import About from "./components/main/about";
 import Contact from "./components/main/Contact";
+import About from "./components/main/about";
 
 function App() {
   return (
