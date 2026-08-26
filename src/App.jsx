@@ -8,7 +8,7 @@ import Services from "./components/main/Services";
 import Solution from "./components/main/Solution";
 import Portfolio from "./components/main/Portfolio";
 import Contact from "./components/main/Contact";
-import About from "./components/main/about";
+import About from "./components/main/About";
 
 function App() {
   return (
